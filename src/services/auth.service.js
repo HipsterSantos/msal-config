@@ -26,7 +26,8 @@ export default class AuthService {
     return this.app.loginPopup(this.applicationConfig.graphScopes).then(
       idToken => {
         const user = this.app.getUser();
-        if (user) {
+                debugger
+          if (user) {
           return user;
         } else {
           return null;
@@ -43,6 +44,7 @@ export default class AuthService {
   getToken() {
     return this.app.acquireTokenSilent(this.applicationConfig.graphScopes).then(
       accessToken => {
+          debugger
         return accessToken;
       },
       error => {

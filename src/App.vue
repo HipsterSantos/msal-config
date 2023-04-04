@@ -66,6 +66,7 @@ export default {
       this.authService.login().then(
         user => {
           if (user) {
+              debugger
             this.user = user;
           } else {
             this.loginFailed = true;
